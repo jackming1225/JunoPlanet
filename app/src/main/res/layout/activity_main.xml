@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="planetData"
+            type="com.planetjuno.model.PlanetViewDTO" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_ffffff"
+            android:scaleType="fitXY" />
+
+        <ProgressBar
+            android:id="@+id/pbImageLoading"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:background="@color/transparent_purple"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{planetData.title}"
+                    android:textColor="@color/white_ffffff"
+                    tools:text="Hello World! \n ssssss" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/transparent_purple"
+                android:scaleType="center"
+                android:src="@drawable/ic_calendar" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="@color/transparent_purple"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{planetData.explanation}"
+                    android:textColor="@color/white_ffffff"
+                    tools:text="If you could stand on Mars -- what might you see? If you were NASA's Curiosity rover, just last month you would have seen the view from Vera Rubin Ridge, an intriguing rock-strewn perch on the side of Mount Sharp. In the featured 360-degree panorama, you can spin around and take in the vista from all directions, in many browsers, just by pointing or tilting.  In this virtual reality view, many instruments on the rover are labelled, including antennas, the robotic arm, and the radioisotope thermoelectric generator (RTG). Dark sand and light rock cover the ground nearby in a mixture called lakebed mudstone. Towering Mount Sharp is only barely visible in the distance due to airborne dust from a planet-wide storm just winding down. Among its many discoveries, Curiosity has found that the raw ingredients for life are present on Mars.  Next on Mars will be NASA's Insight, on target to land in late November, which is scheduled to deploy a seismometer to better study the interior of the red planet." />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivZoomOrPlay"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@color/transparent_purple"
+                android:scaleType="center" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
