@@ -19,8 +19,7 @@ class BaseViewModel(application: Application) : AndroidViewModel(application) {
     fun init() {
         fetchPlanetData(
             loadSuccess = {},
-            loadFailure = {},
-       date =  "2018-09-10")
+            loadFailure = {})
     }
 
     /**

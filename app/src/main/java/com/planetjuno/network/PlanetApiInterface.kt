@@ -10,9 +10,6 @@ interface PlanetApiInterface {
     @GET("?api_key=DEMO_KEY")
     fun getPlanetData(@Query("date") date: String?): Call<ResponsePlanet>
 
-    @GET("withdrawal/limits/")
-    fun getPlanetDataForDate(): Call<ResponsePlanet>
-
     /**
      * Companion object to create the Rupeek Quick ApiService
      */
