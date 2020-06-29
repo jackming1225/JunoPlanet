@@ -11,7 +11,7 @@ interface PlanetApiInterface {
     fun getPlanetData(@Query("date") date: String?): Call<ResponsePlanet>
 
     /**
-     * Companion object to create the Rupeek Quick ApiService
+     * Companion object to create the ApiService
      */
     companion object Factory {
         fun create(): PlanetApiInterface? {
